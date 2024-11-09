@@ -1,0 +1,7 @@
+/* project_gantt/static/src/css/gantt_styles.css */
+.gantt-task-done {
+    background-color: #4caf50 !important;
+}
+.gantt-task-in-progress {
+    background-color: #ff9800 !important;
+}

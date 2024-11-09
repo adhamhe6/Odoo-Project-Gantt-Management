@@ -1,0 +1,35 @@
+<!-- project_gantt/views/action_views.xml -->
+<odoo>
+    <!-- Project Action -->
+    <record id="action_project_gantt" model="ir.actions.act_window">
+        <field name="name">Projects</field>
+        <field name="res_model">project.gantt</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_create">
+                Create your first project
+            </p>
+        </field>
+    </record>
+
+    <!-- Task Action -->
+    <record id="action_project_gantt_task" model="ir.actions.act_window">
+        <field name="name">Tasks</field>
+        <field name="res_model">project.gantt.task</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_create">
+                Create your first task
+            </p>
+        </field>
+    </record>
+
+    <!-- Gantt Action -->
+    <record id="action_project_gantt_chart" model="ir.actions.act_window">
+        <field name="name">Gantt Chart</field>
+        <field name="res_model">project.gantt.task</field>
+        <field name="view_mode">gantt</field>
+        <field name="view_id" ref="view_project_gantt_gantt"/>
+        <field name="target">current</field>
+    </record>
+</odoo>

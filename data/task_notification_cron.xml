@@ -1,0 +1,13 @@
+<odoo>
+    <!-- Scheduled Action to Notify Users of Upcoming Deadlines -->
+    <record id="ir_cron_notify_upcoming_tasks" model="ir.cron">
+        <field name="name">Notify Users of Upcoming Tasks</field>
+        <field name="model_id" ref="model_project_gantt_task"/>
+        <field name="state">code</field>
+        <field name="code">model.notify_upcoming_tasks()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="active" eval="True"/>
+    </record>
+</odoo>

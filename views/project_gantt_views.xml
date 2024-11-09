@@ -1,0 +1,54 @@
+<!-- project_gantt/views/project_gantt_views.xml -->
+<odoo>
+    <!-- Project List View -->
+    <record id="view_project_gantt_tree" model="ir.ui.view">
+        <field name="name">project.gantt.tree</field>
+        <field name="model">project.gantt</field>
+        <field name="arch" type="xml">
+            <tree string="Projects">
+                <field name="name"/>
+                <field name="deadline"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Project Form View -->
+    <record id="view_project_gantt_form" model="ir.ui.view">
+        <field name="name">project.gantt.form</field>
+        <field name="model">project.gantt</field>
+        <field name="arch" type="xml">
+            <form string="Project">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="deadline"/>
+                    </group>
+                    <notebook>
+                        <page string="Tasks">
+                            <field name="task_ids">
+                                <tree string="Tasks">
+                                    <field name="name"/>
+                                    <field name="start_date"/>
+                                    <field name="end_date"/>
+                                    <field name="assigned_to"/>
+                                    <field name="stage"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Project Gantt View -->
+    <record id="view_project_gantt_gantt" model="ir.ui.view">
+        <field name="name">project.gantt.gantt</field>
+        <field name="model">project.gantt.task</field>
+        <field name="arch" type="xml">
+            <gantt string="Project Gantt Chart" date_start="start_date" date_stop="end_date" default_group_by="project_id">
+                <field name="name"/>
+                <field name="assigned_to"/>
+                <field name="stage"/>
+            </gantt>
+        </field>
+    </record>
+</odoo>

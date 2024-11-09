@@ -1,0 +1,40 @@
+<!-- project_gantt/data/task_gantt_data.xml -->
+<odoo>
+    <!-- Sample Tasks for Project 1 -->
+    <record id="project_gantt_task_1" model="project.gantt.task">
+        <field name="name">Design Mockups</field>
+        <field name="end_date">2024-11-15</field>
+        <field name="project_id" ref="project_gantt_project_1"/>
+        <field name="stage">in_progress</field>
+    </record>
+
+    <record id="project_gantt_task_2" model="project.gantt.task">
+        <field name="name">User Testing</field>
+        <field name="end_date">2024-11-30</field>
+        <field name="project_id" ref="project_gantt_project_1"/>
+        <field name="stage">draft</field>
+    </record>
+
+    <!-- Sample Tasks for Project 2 -->
+    <record id="project_gantt_task_3" model="project.gantt.task">
+        <field name="name">Backend Development</field>
+        <field name="end_date">2024-11-25</field>
+        <field name="project_id" ref="project_gantt_project_2"/>
+        <field name="stage">in_progress</field>
+    </record>
+
+    <record id="project_gantt_task_4" model="project.gantt.task">
+        <field name="name">Frontend Development</field>
+        <field name="end_date">2024-11-30</field>
+        <field name="project_id" ref="project_gantt_project_2"/>
+        <field name="stage">draft</field>
+    </record>
+
+    <!-- Sample Task for Project 3 -->
+    <record id="project_gantt_task_5" model="project.gantt.task">
+        <field name="name">Keyword Research</field>
+        <field name="end_date">2024-11-20</field>
+        <field name="project_id" ref="project_gantt_project_3"/>
+        <field name="stage">done</field>
+    </record>
+</odoo>

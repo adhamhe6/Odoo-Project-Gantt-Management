@@ -1,0 +1,36 @@
+<!-- project_gantt/views/project_task_views.xml -->
+<odoo>
+    <!-- Task List View -->
+    <record id="view_project_gantt_task_tree" model="ir.ui.view">
+        <field name="name">project.gantt.task.tree</field>
+        <field name="model">project.gantt.task</field>
+        <field name="arch" type="xml">
+            <tree string="Tasks">
+                <field name="name"/>
+                <field name="assigned_to"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="stage"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Task Form View -->
+    <record id="view_task_form" model="ir.ui.view">
+        <field name="name">project.gantt.task.form</field>
+        <field name="model">project.gantt.task</field>
+        <field name="arch" type="xml">
+            <form string="Task">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="assigned_to"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="project_id"/>
+                        <field name="stage"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

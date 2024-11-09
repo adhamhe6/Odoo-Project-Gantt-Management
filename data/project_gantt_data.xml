@@ -1,0 +1,18 @@
+<!-- project_gantt/data/project_gantt_data.xml -->
+<odoo>
+    <!-- Sample Projects -->
+    <record id="project_gantt_project_1" model="project.gantt">
+        <field name="name">Website Redesign</field>
+        <field name="deadline">2024-12-31</field>
+    </record>
+
+    <record id="project_gantt_project_2" model="project.gantt">
+        <field name="name">Mobile App Development</field>
+        <field name="deadline">2024-11-30</field>
+    </record>
+
+    <record id="project_gantt_project_3" model="project.gantt">
+        <field name="name">SEO Optimization</field>
+        <field name="deadline">2025-01-15</field>
+    </record>
+</odoo>

@@ -1,0 +1,14 @@
+<!-- project_gantt/views/menu_views.xml -->
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="menu_project_gantt_root" name="Project Gantt" sequence="10"/>
+
+    <!-- Sub-menu for Projects -->
+    <menuitem id="menu_project_gantt_projects" name="Projects" parent="menu_project_gantt_root" sequence="10" action="action_project_gantt"/>
+
+    <!-- Sub-menu for Tasks -->
+    <menuitem id="menu_project_gantt_tasks" name="Tasks" parent="menu_project_gantt_root" sequence="20" action="action_project_gantt_task"/>
+
+    <!-- Sub-menu for Gantt Chart -->
+    <menuitem id="menu_project_gantt_chart" name="Gantt Chart" parent="menu_project_gantt_root" sequence="30" action="action_project_gantt_chart"/>
+</odoo>

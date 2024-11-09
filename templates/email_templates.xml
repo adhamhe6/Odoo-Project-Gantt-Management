@@ -1,0 +1,17 @@
+<odoo>
+    <!-- Email Template for Task Deadline Notification -->
+    <record id="email_template_task_deadline" model="mail.template">
+        <field name="name">Task Deadline Notification</field>
+        <field name="email_from">${(user.email or 'noreply@yourcompany.com')|safe}</field>
+        <field name="subject">Upcoming Task Deadline: ${object.name}</field>
+        <field name="model_id" ref="model_project_gantt_task"/>
+        <field name="body_html">
+            <![CDATA[
+                <p>Dear ${object.assigned_to.name},</p>
+                <p>The deadline for the task "<strong>${object.name}</strong>" is approaching on <strong>${object.end_date}</strong>.</p>
+                <p>Please make sure to complete the task on time.</p>
+                <p>Best Regards,<br/>Your Project Management System</p>
+            ]]>
+        </field>
+    </record>
+</odoo>
